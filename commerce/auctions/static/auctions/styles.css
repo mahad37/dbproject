@@ -1,0 +1,21 @@
+body {
+    padding: 10px;
+
+}
+
+h1{
+  text-align: center;
+  color:#070966;
+}
+
+#description{
+  margin: 400px 50px 0px 0px
+}
+
+#image{
+  width: 70%;
+  height: 10%;
+  margin:0px 100% 0px 0px;
+}
+
+

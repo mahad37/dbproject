@@ -1,0 +1,29 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+{{time}}
+
+
+<form action="{% url 'checkout' item.id amount %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <input class="form-control" autofocus type="text" name="username" placeholder="{{user.username}}">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="text" name="address" placeholder="Enter Address">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="text" name="city" placeholder="Enter City">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="number" name="postal" placeholder="Enter Postal Code">
+    </div>
+    <h4>${{amount}}</h4>
+    *The website charges 0.05% of the amount
+    <br>
+    <input class="btn btn-primary" type="submit" value="Finish">
+</form>
+
+
+{% endblock %}

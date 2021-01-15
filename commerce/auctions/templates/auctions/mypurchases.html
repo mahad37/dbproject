@@ -1,0 +1,12 @@
+{% extends "auctions/layout.html" %}
+
+{{transactions}}
+{% block body %}
+{% for transaction in transactions %}
+<h4>{{transaction.date}}</h4>
+<h4>{{transaction.product}}</h4>
+<h4>${{transaction.amount}}</h4>
+<br>
+<br>
+{% endfor %}
+{% endblock %}
